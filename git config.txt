@@ -1,0 +1,16 @@
+git config --global user.name "lindaoktaviyani"
+git config --global user.email "oktaviyani.linda@gmail.com"
+git config --list
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/lindaoktaviyani/disposisi
+
+git remote show origingit push -u
+git push -u origin main
+
+git add .
+git commit -m ""
+git push origin main
