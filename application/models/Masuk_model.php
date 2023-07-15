@@ -1,7 +1,10 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Masuk_model extends CI_Model {
     protected $_table ='tb_surat_masuk';
     protected $primary = 'id';
+    
     public function getAll() {
         return $this->db->where('is_active',1)->get($this->_table)->result();
     }
@@ -16,6 +19,22 @@ class Masuk_model extends CI_Model {
             'perihal' => $this->input->post('perihal'),
             'keterangan' => $this->input->post('keterangan'),
             'image'=>$this->uploadImage(),
+            'is_active' => '1',
+        ];
+        $this->db->insert($this->_table,$data);
+    }
+
+    public function saveAjuan(){
+        $data = [
+            'no_surat' => $this->input->post('no_surat'),
+            'tgl_surat' => $this->input->post('tgl_surat'),
+            'surat_from' => $this->input->post('surat_from'),
+            'surat_to' => $this->input->post('surat_to'),
+            'tgl_terima' => $this->input->post('tgl_terima'),
+            'perihal' => $this->input->post('perihal'),
+            'keterangan' => $this->input->post('keterangan'),
+            'image'=>$this->uploadImage(),
+            'user_id'=> $this->session->userdata('id'),
             'is_active' => '1',
         ];
         $this->db->insert($this->_table,$data);

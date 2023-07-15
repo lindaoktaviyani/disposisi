@@ -2,8 +2,12 @@
     <div class="container-fluid">
         <h1 class="mt-4"></h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb￾item"><a href="<?php echo site_url('admin/user') ?>">user</a></li>
-            <li class="breadcrumb-item active"><?php echo $title ?></li>
+            <li class="breadcrumb-item">
+                <a href="<?php echo site_url('admin/user') ?>">user</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <?php echo $title ?>
+            </li>
         </ol>
         
         <div class="card mb-4">
@@ -19,7 +23,7 @@
                 
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered table￾hover" id="tabelkelas" width="100%" cellspacing="0">
+                        <table class="table table-striped table-bordered table-hover" id="tabelkelas" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>No.</th>
