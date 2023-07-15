@@ -29,7 +29,7 @@
                                 <th>No.</th> 
                                 <th>No Surat</th> 
                                 <th>Perihal</th> 
-                                <th>Keterangan</th> 
+                                <th>Keterangan</th>  
                                 <th>Tanggal Surat</th> 
                                 <th>Tanggal Terima</th> 
                                 <th>Surat</th> 
